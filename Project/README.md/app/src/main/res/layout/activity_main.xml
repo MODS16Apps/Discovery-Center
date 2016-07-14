@@ -1,12 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="edu.fau.jeff.discoverycentergithub.MainActivity">
+    tools:context="edu.fau.jeff.discoverycentergithub.MainActivity"
+    android:background="#ffcc00"
+    android:id="@+id/dayOfBirth">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/modsLogo"
+        android:src="@drawable/modslogo"
+        android:layout_gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="206dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:id="@+id/enterName"
+        android:layout_alignBottom="@+id/modsLogo"
+        android:layout_alignEnd="@+id/modsLogo"
+        android:enabled="false" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/dayOfBirth"
+        android:layout_marginTop="43dp"
+        android:layout_below="@+id/modsLogo"
+        android:layout_alignEnd="@+id/modsLogo"
+        android:layout_alignStart="@+id/enterName"
+        android:text="Birthday" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Male"
+        android:id="@+id/checkBox"
+        android:layout_marginTop="41dp"
+        android:layout_below="@+id/dayOfBirth"
+        android:layout_alignStart="@+id/dayOfBirth" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Female"
+        android:id="@+id/checkBox2"
+        android:layout_alignTop="@+id/checkBox"
+        android:layout_alignEnd="@+id/dayOfBirth" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:id="@+id/button"
+        android:layout_marginTop="41dp"
+        android:layout_below="@+id/checkBox2"
+        android:layout_centerHorizontal="true"
+        android:background="#390dff"
+        android:backgroundTint="#390dff"
+        android:clickable="true"
+        android:minHeight="@dimen/abc_action_bar_overflow_padding_start_material"
+        android:fontFamily="@string/abc_action_bar_home_description" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Skip"
+        android:id="@+id/button2"
+        android:background="#390dff"
+        android:minHeight="@dimen/abc_action_bar_overflow_padding_start_material"
+        android:layout_marginTop="39dp"
+        android:layout_below="@+id/button"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@string/abc_action_bar_up_description" />
 
 </RelativeLayout>
