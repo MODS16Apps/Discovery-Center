@@ -74,7 +74,9 @@
         android:maxWidth="35dp"
         android:minHeight="35dp"
         android:minWidth="35dp"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/checkBox2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp"
+        android:clickable="true" />
 
 </RelativeLayout>
