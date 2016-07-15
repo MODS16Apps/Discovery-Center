@@ -33,6 +33,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="edu.fau.jeff.discoverycentergithub.ScavengerItemListActivity" />
         </activity>
+        <activity android:name=".SelectionScreen"></activity>
     </application>
 
 </manifest>
