@@ -18,8 +18,7 @@
         android:src="@drawable/modslogo"
         android:layout_gravity="center"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="206dp" />
+        android:layout_centerHorizontal="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -30,7 +29,9 @@
         android:id="@+id/enterName"
         android:layout_alignBottom="@+id/modsLogo"
         android:layout_alignEnd="@+id/modsLogo"
-        android:enabled="false" />
+        android:enabled="true"
+        android:clickable="true"
+        android:editable="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -42,7 +43,10 @@
         android:layout_below="@+id/modsLogo"
         android:layout_alignEnd="@+id/modsLogo"
         android:layout_alignStart="@+id/enterName"
-        android:text="Birthday" />
+        android:text="Birthday"
+        android:clickable="true"
+        android:enabled="true"
+        android:editable="true" />
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -61,32 +65,16 @@
         android:layout_alignTop="@+id/checkBox"
         android:layout_alignEnd="@+id/dayOfBirth" />
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Start"
-        android:id="@+id/button"
-        android:layout_marginTop="41dp"
-        android:layout_below="@+id/checkBox2"
-        android:layout_centerHorizontal="true"
-        android:background="#390dff"
-        android:backgroundTint="#390dff"
-        android:clickable="true"
-        android:minHeight="@dimen/abc_action_bar_overflow_padding_start_material"
-        android:fontFamily="@string/abc_action_bar_home_description" />
-
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Skip"
-        android:id="@+id/button2"
-        android:background="#390dff"
-        android:minHeight="@dimen/abc_action_bar_overflow_padding_start_material"
-        android:layout_marginTop="39dp"
-        android:layout_below="@+id/button"
-        android:layout_centerHorizontal="true"
-        android:fontFamily="@string/abc_action_bar_up_description" />
+        android:id="@+id/imageView"
+        android:src="@drawable/abc_ic_go_search_api_material"
+        android:maxHeight="35dp"
+        android:maxWidth="35dp"
+        android:minHeight="35dp"
+        android:minWidth="35dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
