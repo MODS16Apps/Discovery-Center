@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Discovery Center GitHub</string>
+    <string name="title_scavengeritem_list">Scavenger Items</string>
+    <string name="title_scavengeritem_detail">Scavenger Item Detail</string>
 </resources>
