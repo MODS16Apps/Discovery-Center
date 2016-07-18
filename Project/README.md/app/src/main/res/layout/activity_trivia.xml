@@ -2,17 +2,49 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:weightSum="1">
+    android:weightSum="1"
+    android:background="#ffcc00">
+
+    <ImageView
+        android:layout_width="413dp"
+        android:layout_height="514dp"
+        android:id="@+id/imageView2"
+        android:src="@drawable/questionbox"
+        android:layout_gravity="center_horizontal" />
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_horizontal">
 
-        <TextView
+        <Button
             android:layout_width="wrap_content"
-            android:layout_height="200dp"
-            android:text="New Text"
-            android:id="@+id/textView"
-            android:layout_gravity="center_horizontal|top" />
+            android:layout_height="wrap_content"
+            android:text="New Button"
+            android:id="@+id/button"
+            android:layout_gravity="left|top"
+            android:background="@drawable/answerbox" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Button"
+            android:id="@+id/button2"
+            android:layout_gravity="left|bottom" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Button"
+            android:id="@+id/button3"
+            android:layout_gravity="right|top" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Button"
+            android:id="@+id/button4"
+            android:layout_gravity="right|bottom" />
     </FrameLayout>
+
 </LinearLayout>

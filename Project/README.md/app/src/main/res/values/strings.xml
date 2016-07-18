@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Discovery Center GitHub</string>
+    <string name="title_scavengeritem_list">Scavenger Items</string>
+    <string name="title_scavengeritem_detail">Scavenger Item Detail</string>
+<<<<<<< HEAD
     <string name="title_activity_trivia">trivia</string>
 =======
     <string name="title_activity_scrolling">ScrollingActivity</string>

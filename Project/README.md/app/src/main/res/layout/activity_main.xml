@@ -8,8 +8,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="edu.fau.jeff.discoverycentergithub.MainActivity"
-    android:background="#ffcc00"
-    android:id="@+id/dayOfBirth">
+    android:background="#ffcc00">
 
     <ImageView
         android:layout_width="wrap_content"
@@ -26,7 +25,7 @@
         android:inputType="textPersonName"
         android:text="Name"
         android:ems="10"
-        android:id="@+id/enterName"
+        android:id="@+id/enterName_editText"
         android:layout_alignBottom="@+id/modsLogo"
         android:layout_alignEnd="@+id/modsLogo"
         android:enabled="true"
@@ -38,32 +37,15 @@
         android:layout_height="wrap_content"
         android:inputType="date"
         android:ems="10"
-        android:id="@+id/dayOfBirth"
+        android:id="@+id/dayOfBirth_editText"
         android:layout_marginTop="43dp"
         android:layout_below="@+id/modsLogo"
         android:layout_alignEnd="@+id/modsLogo"
-        android:layout_alignStart="@+id/enterName"
+        android:layout_alignStart="@+id/enterName_editText"
         android:text="Birthday"
         android:clickable="true"
         android:enabled="true"
         android:editable="true" />
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Male"
-        android:id="@+id/checkBox"
-        android:layout_marginTop="41dp"
-        android:layout_below="@+id/dayOfBirth"
-        android:layout_alignStart="@+id/dayOfBirth" />
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Female"
-        android:id="@+id/checkBox2"
-        android:layout_alignTop="@+id/checkBox"
-        android:layout_alignEnd="@+id/dayOfBirth" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -74,9 +56,28 @@
         android:maxWidth="35dp"
         android:minHeight="35dp"
         android:minWidth="35dp"
-        android:layout_below="@+id/checkBox2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="29dp"
-        android:clickable="true" />
+        android:clickable="true"
+        android:layout_marginTop="61dp"
+        android:layout_below="@+id/female_radioButton"
+        android:layout_toStartOf="@+id/female_radioButton" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Male"
+        android:id="@+id/male_radioButton"
+        android:checked="false"
+        android:layout_below="@+id/dayOfBirth_editText"
+        android:layout_alignStart="@+id/dayOfBirth_editText"
+        android:layout_marginTop="55dp" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Female"
+        android:id="@+id/female_radioButton"
+        android:checked="false"
+        android:layout_alignTop="@+id/male_radioButton"
+        android:layout_alignEnd="@+id/modsLogo" />
 
 </RelativeLayout>
