@@ -16,9 +16,10 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".SelectionScreen">
-
-        </activity>
+        <activity android:name=".SelectionScreen"></activity>
+        <activity android:name=".Trivia"></activity>
+        <activity android:name=".ScavengerHunt"></activity>
+        <activity android:name=".PhotoAdventure"></activity>
     </application>
 
 </manifest>
