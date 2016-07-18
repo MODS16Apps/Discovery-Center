@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-public class SelectionScreen extends AppCompatActivity {
+public class SelectionScreen extends AppCompatActivity implements View.OnClickListener {
     private ImageView trivia, scavengerHunt, photoAdventure, settings;
 
     @Override
@@ -14,13 +14,8 @@ public class SelectionScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selection_screen);
         trivia=(ImageView) findViewById(R.id.triviagame);
-        trivia.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i0=new Intent(SelectionScreen.this, Trivia.class);
-                startActivity(i0);
-            }
-        });
+        trivia.setOnClickListener(this);
+
 
         scavengerHunt=(ImageView) findViewById(R.id.scavenge);
         scavengerHunt.setOnClickListener(new View.OnClickListener() {
@@ -48,6 +43,17 @@ public class SelectionScreen extends AppCompatActivity {
                 startActivity(i3);
             }
         });
+
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.triviagame:
+                Intent i0=new Intent(this, Trivia.class);
+                startActivity(i0);
+                break;
+        }
 
     }
 }

@@ -15,11 +15,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".SelectionScreen"></activity>
-        <activity android:name=".Trivia"></activity>
-        <activity android:name=".ScavengerHunt"></activity>
-        <activity android:name=".PhotoAdventure"></activity>
+        <activity
+            android:name=".SelectionScreen"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".Trivia"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".ScavengerHunt"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".PhotoAdventure"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".Settings"
+            android:label="@string/app_name" />
     </application>
 
 </manifest>
