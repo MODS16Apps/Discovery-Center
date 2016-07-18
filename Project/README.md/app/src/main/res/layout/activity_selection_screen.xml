@@ -26,7 +26,8 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="280dp"
-            android:src="@drawable/triviabutton"/>
+            android:src="@drawable/triviabutton"
+            android:id="@+id/triviagame" />
             <View
                 android:layout_width="match_parent"
                 android:layout_height="10dp"
@@ -34,7 +35,8 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="280dp"
-            android:src="@drawable/scavengerhunt"/>
+            android:src="@drawable/scavengerhunt"
+            android:id="@+id/scavenge" />
             <View
                 android:layout_width="match_parent"
                 android:layout_height="10dp"
@@ -42,7 +44,8 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="280dp"
-            android:src="@drawable/photoadventure"/>
+            android:src="@drawable/photoadventure"
+            android:id="@+id/photo" />
             <View
                 android:layout_width="match_parent"
                 android:layout_height="10dp"
@@ -50,7 +53,8 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="280dp"
-            android:src="@drawable/settings"/>
+            android:src="@drawable/settings"
+            android:id="@+id/settings" />
         </LinearLayout>
     </ScrollView>
 
