@@ -1,6 +1,7 @@
 package edu.fau.jeff.discoverycentergithub;
 
 import android.app.Activity;
+import android.widget.Button;
 
 /**
  * Created by Clauciela on 7/15/2016.
@@ -11,7 +12,7 @@ public class Question extends Activity{
     private String a;
     private String b;
     private String c;
-    private String ans;
+    private static String ans;
 
     public Question(String q, String a, String b, String c, String ans){
         this.num++;
@@ -70,8 +71,9 @@ public class Question extends Activity{
         this.ans = ans;
     }
 
-    public boolean correct(Button b){
-        if(b.getText().equals(ans)){
+    public boolean correct(Object b){
+        Button bo = (Button) b;
+        if(ans.equalsIgnoreCase((String)bo.getText())){
             return true;
         }
         return false;
