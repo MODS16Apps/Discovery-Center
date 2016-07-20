@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imageView2"
-            android:src="@drawable/QuestionBoxLarge"
+            android:src="@drawable/questionboxlargeone"
             android:adjustViewBounds="true"
             android:visibility="visible"
             android:layout_gravity="center" />
