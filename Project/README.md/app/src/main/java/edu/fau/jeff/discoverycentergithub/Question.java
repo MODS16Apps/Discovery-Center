@@ -69,4 +69,11 @@ public class Question extends Activity{
     public void setAns(String ans) {
         this.ans = ans;
     }
+
+    public boolean correct(Button b){
+        if(b.getText().equals(ans)){
+            return true;
+        }
+        return false;
+    }
 }

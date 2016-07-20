@@ -31,30 +31,25 @@ public class Trivia extends AppCompatActivity{
         setContentView(R.layout.activity_trivia);
         quizMethod();
     }
-
     public void quizMethod(){
-        // for(Question q: quiz){
-        Question q = on;
-        ((TextView)findViewById(R.id.textView)).setText(q.getQ());
-        ArrayList<String> ansarr = new ArrayList<String>();
-        ansarr.add(q.getA());
-        ansarr.add(q.getB());
-        ansarr.add(q.getC());
-        ansarr.add(q.getAns());
-        Collections.shuffle(ansarr);
-        Button button1 = (Button)findViewById(R.id.button);
-        button1.setText(ansarr.get(0));
-        Button button2 = (Button)findViewById(R.id.button2);
-        button2.setText(ansarr.get(1));
-        Button button3 = (Button)findViewById(R.id.button3);
-        button3.setText(ansarr.get(2));
-        Button button4 = (Button)findViewById(R.id.button4);
-        button4.setText(ansarr.get(3));
-        //  }
-
+        while(a<quiz.length){
+            Question q = on;
+            ((TextView)findViewById(R.id.textView)).setText(q.getQ());
+            ArrayList<String> ansarr = new ArrayList<String>();
+            ansarr.add(q.getA());
+            ansarr.add(q.getB());
+            ansarr.add(q.getC());
+            ansarr.add(q.getAns());
+            Collections.shuffle(ansarr);
+            Button button1 = (Button)findViewById(R.id.button);
+            button1.setText(ansarr.get(0));
+            Button button2 = (Button)findViewById(R.id.button2);
+            button2.setText(ansarr.get(1));
+            Button button3 = (Button)findViewById(R.id.button3);
+            button3.setText(ansarr.get(2));
+            Button button4 = (Button)findViewById(R.id.button4);
+            button4.setText(ansarr.get(3));
+        }
     }
-
-
-
 }
 
