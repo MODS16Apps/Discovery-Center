@@ -43,18 +43,9 @@ public class PhotoAdventure extends AppCompatActivity {
         picture = (ImageView) findViewById(R.id.imageView3);
         String name =   dateToString(new Date(),"yyyy-MM-dd-hh-mm-ss");
         destination = new File(Environment.getExternalStorageDirectory(), name + ".jpg");
-
-        Button click = (Button) findViewById(R.id.button5);
-        click.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(destination));
-                startActivityForResult(intent, REQUEST_IMAGE);
-
-            }
-        });
+        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(destination));
+        startActivityForResult(intent, REQUEST_IMAGE);
     }
 
     @Override
