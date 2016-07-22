@@ -1,9 +1,13 @@
 package edu.fau.jeff.discoverycentergithub;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 
 public class SelectionScreen extends AppCompatActivity implements View.OnClickListener {
@@ -30,8 +34,13 @@ public class SelectionScreen extends AppCompatActivity implements View.OnClickLi
         photoAdventure.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i2=new Intent(SelectionScreen.this, PhotoAdventure.class);
-                startActivity(i2);
+                if(checkCameraHardware()) {
+                    Intent i2 = new Intent(SelectionScreen.this, PhotoAdventure.class);
+                    startActivity(i2);
+                }
+
+
+
             }
         });
 
@@ -55,5 +64,14 @@ public class SelectionScreen extends AppCompatActivity implements View.OnClickLi
                 break;
         }
 
+    }
+
+    private boolean checkCameraHardware(){
+        if(getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA)){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 }
