@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import java.lang.*;
 import java.util.*;
-import java.util.concurrent.TimeUnit;
+import android.os.Handler;
 
 
 /**
@@ -28,11 +28,11 @@ public class Trivia extends AppCompatActivity implements View.OnClickListener {
     Question th = new Question("uiju", "dg", "egerg", "erger", "qweeqweq");
     Question fo = new Question("digisiodio", "1o", "100uihui000", "324", "sdfsdf");
     Question fi = new Question("sdgsdfsd", "000", "00", "koioi", "9090");
-    Question si = new Question("How many fish are there in the sea?", "10000", "100000000", "stop trying", "infinite");
-    Question se = new Question("How many fish are there in the sea?", "10000", "100000000", "stop trying", "infinite");
-    Question ei = new Question("How many fish are there in the sea?", "10000", "100000000", "stop trying", "infinite");
-    Question ni = new Question("How many fish are there in the sea?", "10000", "100000000", "stop trying", "infinite");
-    Question te = new Question("How many fish are there in the sea?", "10000", "100000000", "stop trying", "infinite");
+    Question si = new Question("How many fish are there in the sea?", "10000", "100000000", "stop trying", "i=");
+    Question se = new Question("How many fish are there in the sea?", "10000", "100000000", "stop trying", "in");
+    Question ei = new Question("How many fish are there in the sea?", "10000", "100000000", "stop trying", "inf");
+    Question ni = new Question("How many fish are there in the sea?", "10000", "100000000", "stop trying", "infi");
+    Question te = new Question("H", "10000", "100000000", "stop trying", "nigger");
     Question[] quiz = {on, tw, th, fo, fi, si, se, ei, ni, te};
 
     @Override
@@ -43,11 +43,12 @@ public class Trivia extends AppCompatActivity implements View.OnClickListener {
         button2 = (Button) findViewById(R.id.button2);
         button3 = (Button) findViewById(R.id.button3);
         button4 = (Button) findViewById(R.id.button4);
-        quizMethod();
         button.setOnClickListener(this);
         button2.setOnClickListener(this);
         button3.setOnClickListener(this);
         button4.setOnClickListener(this);
+        quizMethod();
+
     }
 
     public void quizMethod() {
@@ -56,7 +57,7 @@ public class Trivia extends AppCompatActivity implements View.OnClickListener {
         button3.setBackgroundResource(R.drawable.answerbox);
         button4.setBackgroundResource(R.drawable.answerbox);
         q = quiz[f];
-        ((TextView) findViewById(R.id.textView)).setText(q.getQ());
+        ((TextView) findViewById(R.id.textView)).setText(q.getNum()+". "+q.getQ());
         ansarr = new ArrayList<>();
         ansarr.add(q.getA());
         ansarr.add(q.getB());
@@ -72,12 +73,19 @@ public class Trivia extends AppCompatActivity implements View.OnClickListener {
     public void clicky(Button butto){
         if (q.correct(butto)) {
             butto.setBackgroundResource(R.drawable.answerboxcorrect);
-            f++;
-            ansarr.clear();
-            quizMethod();
+            final Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    f++;
+                    ansarr.clear();
+                    quizMethod();
+                }
+            }, 500);
 
         }else{
             butto.setBackgroundResource(R.drawable.answerboxwrong);
+            butto.setText("");
         }
     }
 

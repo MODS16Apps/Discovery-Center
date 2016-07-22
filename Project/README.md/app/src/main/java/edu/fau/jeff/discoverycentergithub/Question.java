@@ -7,12 +7,12 @@ import android.widget.Button;
  * Created by Clauciela on 7/15/2016.
  */
 public class Question extends Activity{
-    private int num = 1;
+    private int num = 0;
     private String q;
     private String a;
     private String b;
     private String c;
-    private static String ans;
+    private String ans;
 
     public Question(String q, String a, String b, String c, String ans){
         this.num++;
@@ -33,10 +33,6 @@ public class Question extends Activity{
 
     public int getNum() {
         return num;
-    }
-
-    public void setNum(int num) {
-        this.num = num;
     }
 
     public String getQ() {
