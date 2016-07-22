@@ -28,7 +28,7 @@ import java.util.Date;
  * Created by Jeffrey S on 7/17/2016.
  */
 public class PhotoAdventure extends AppCompatActivity {
-    private static final int IMAGE_CAPTURE=102;
+    private static final int REQUEST_IMAGE = 100;
     TextView tvPath;
     ImageView picture;
     File destination;
@@ -37,12 +37,12 @@ public class PhotoAdventure extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_photo_adventure);
-        tvPath = (TextView) findViewById(R.id.idTvPath);
+        tvPath = (TextView) findViewById(R.id.textView2);
         picture = (ImageView) findViewById(R.id.imageView3);
         String name =   dateToString(new Date(),"yyyy-MM-dd-hh-mm-ss");
         destination = new File(Environment.getExternalStorageDirectory(), name + ".jpg");
 
-        Button click = (Button) findViewById(R.id.idBtnTakePicture);
+        Button click = (Button) findViewById(R.id.button5);
         click.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -91,4 +91,3 @@ public class PhotoAdventure extends AppCompatActivity {
 
 
 
-}
