@@ -32,25 +32,29 @@
                 android:layout_width="match_parent"
                 android:layout_height="10dp"
                 android:layout_weight="1"/>
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="280dp"
-            android:src="@drawable/scavengerhunt"
-            android:id="@+id/scavenge" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:src="@drawable/photoadventure"
+                android:id="@+id/photo" />
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="10dp"
                 android:layout_weight="1"/>
-        <ImageView
+
+            <ImageView
             android:layout_width="match_parent"
             android:layout_height="280dp"
-            android:src="@drawable/photoadventure"
-            android:id="@+id/photo" />
+            android:src="@drawable/newriverinnbutton"
+            android:id="@+id/newriverinn" />
             <View
                 android:layout_width="match_parent"
                 android:layout_height="10dp"
                 android:layout_weight="1"/>
-        <ImageView
+
+            <ImageView
             android:layout_width="match_parent"
             android:layout_height="280dp"
             android:src="@drawable/settings"

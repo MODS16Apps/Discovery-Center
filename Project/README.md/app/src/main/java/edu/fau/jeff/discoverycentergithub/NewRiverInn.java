@@ -6,11 +6,11 @@ import android.support.v7.app.AppCompatActivity;
 /**
  * Created by Jeffrey S on 7/17/2016.
  */
-public class ScavengerHunt extends AppCompatActivity{
+public class NewRiverInn extends AppCompatActivity{
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_scavenger_hunt);
+        setContentView(R.layout.activity_new_river_inn);
 
     }
 

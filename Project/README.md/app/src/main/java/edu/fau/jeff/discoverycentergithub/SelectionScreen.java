@@ -1,13 +1,10 @@
 package edu.fau.jeff.discoverycentergithub;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 
 public class SelectionScreen extends AppCompatActivity implements View.OnClickListener {
@@ -25,7 +22,7 @@ public class SelectionScreen extends AppCompatActivity implements View.OnClickLi
         scavengerHunt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i1=new Intent(SelectionScreen.this, ScavengerHunt.class);
+                Intent i1=new Intent(SelectionScreen.this, NewRiverInn.class);
                 startActivity(i1);
             }
         });

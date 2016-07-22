@@ -23,16 +23,16 @@ public class Trivia extends AppCompatActivity implements View.OnClickListener {
     Button button4;
     private int f = 0;
 
-    Question on = new Question("How many fish are there in the sea?", "10000", "100000000", "stop trying", "infinite");
-    Question tw = new Question("pokemon go?", "no", "ojio", "uihui", "yes");
-    Question th = new Question("uiju", "dg", "egerg", "erger", "qweeqweq");
-    Question fo = new Question("digisiodio", "1o", "100uihui000", "324", "sdfsdf");
-    Question fi = new Question("sdgsdfsd", "000", "00", "koioi", "9090");
-    Question si = new Question("How many fish are there in the sea?", "10000", "100000000", "stop trying", "i=");
-    Question se = new Question("How many fish are there in the sea?", "10000", "100000000", "stop trying", "in");
-    Question ei = new Question("How many fish are there in the sea?", "10000", "100000000", "stop trying", "inf");
-    Question ni = new Question("How many fish are there in the sea?", "10000", "100000000", "stop trying", "infi");
-    Question te = new Question("H", "10000", "100000000", "stop trying", "nigger");
+    Question on = new Question("What kind of Fig Tree lies in the Discovery Center?", "Orange", "Palm", "Conadria", "Strangler");
+    Question tw = new Question("Where does the most orange juice come from?", "California", "Arizona", "Texas", "Florida");
+    Question th = new Question("What is the name of the Discovery Centers greatest clubhouse?", "The Fort Lauderdale Clubhouse", "MODS Clubhouse", "Discover Clubhouse", "Curiousity Clubhouse");
+    Question fo = new Question("What buildable mechanical toys can you play with here?", "Axles", "Magnets", "Bikes", "Gears");
+    Question fi = new Question("What is the historic building this exhibit is based off of?", "The Bonnet House", "The Stranahan House", "Los Olas", "The New River Inn");
+    Question si = new Question("Where can you build/destroy a house?", "Construction site", "Destruction Site", "Build-It House", "Wacky Walls");
+    Question se = new Question("What is the name of the Discovery Centers beloved sail boat?", "The Los Olas", "Discovery Boat", "MODS", "Kids Cove");
+    Question ei = new Question("What is the longest bone in your body?", "Tibia", "Fibula", "Radius", "Femur");
+    Question ni = new Question("What is the shortest bone in the body?", "Sternum", "Distal phalanx", "Calcanetum", "Stirrup");
+    Question te = new Question("Where are there the most bones?", "The Feet", "The Head", "The Spine", "The Hands");
     Question[] quiz = {on, tw, th, fo, fi, si, se, ei, ni, te};
 
     @Override
