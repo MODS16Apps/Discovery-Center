@@ -5,6 +5,7 @@ import android.content.pm.PackageManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.ImageView;
 
 public class SelectionScreen extends AppCompatActivity implements View.OnClickListener {
@@ -13,6 +14,7 @@ public class SelectionScreen extends AppCompatActivity implements View.OnClickLi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_selection_screen);
         trivia=(ImageView) findViewById(R.id.triviagame);
         trivia.setOnClickListener(this);

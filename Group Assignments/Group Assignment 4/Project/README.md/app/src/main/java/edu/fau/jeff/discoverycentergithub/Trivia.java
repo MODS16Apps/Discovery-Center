@@ -3,6 +3,7 @@ package edu.fau.jeff.discoverycentergithub;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Window;
 import android.widget.TextView;
 import android.view.View;
 import android.widget.Button;
@@ -38,6 +39,7 @@ public class Trivia extends AppCompatActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_trivia);
         button = (Button) findViewById(R.id.button);
         button2 = (Button) findViewById(R.id.button2);
