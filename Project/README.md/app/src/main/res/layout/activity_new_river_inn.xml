@@ -13,22 +13,23 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="The New River Inn"
-            android:id="@+id/textView4"
-            android:layout_gravity="center_horizontal"
-            android:textSize="@dimen/abc_action_bar_stacked_max_height"
-            android:textColor="#3508ff" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/imageView5"
+            android:src="@drawable/newriverinntext" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_weight="1"/>
+
 
         <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="502dp"
+        android:layout_height="400dp"
         android:id="@+id/imageView4"
             android:src="@drawable/newriverinn"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="top|center_horizontal" />
 
         <TextView
             android:layout_width="500dp"

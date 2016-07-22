@@ -18,7 +18,7 @@ public class SelectionScreen extends AppCompatActivity implements View.OnClickLi
         trivia.setOnClickListener(this);
 
 
-        scavengerHunt=(ImageView) findViewById(R.id.scavenge);
+        scavengerHunt=(ImageView) findViewById(R.id.newriverinn);
         scavengerHunt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
