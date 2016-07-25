@@ -34,18 +34,36 @@ public class PhotoAdventure extends AppCompatActivity {
     ImageView picture;
     File destination;
     String imagePath;
+    Button camera, gallery;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_photo_adventure);
-        tvPath = (TextView) findViewById(R.id.textView2);
+        //vtvPath = (TextView) findViewById(R.id.textView2);
         picture = (ImageView) findViewById(R.id.imageView3);
         String name =   dateToString(new Date(),"yyyy-MM-dd-hh-mm-ss");
         destination = new File(Environment.getExternalStorageDirectory(), name + ".jpg");
-        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(destination));
-        startActivityForResult(intent, REQUEST_IMAGE);
+        camera=(Button)findViewById(R.id.openCamera);
+        camera.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(destination));
+                startActivityForResult(intent, REQUEST_IMAGE);
+            }
+        });
+        gallery=(Button)findViewById(R.id.openGallery);
+        gallery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_GET_CONTENT);
+                intent.setType("file/*");
+                startActivity(intent);
+            }
+        });
+
     }
 
     @Override
