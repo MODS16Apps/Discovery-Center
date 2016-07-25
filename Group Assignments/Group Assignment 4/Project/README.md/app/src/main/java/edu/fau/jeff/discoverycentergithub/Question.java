@@ -7,7 +7,7 @@ import android.widget.Button;
  * Created by Clauciela on 7/15/2016.
  */
 public class Question extends Activity{
-    private int num = 0;
+    private static int num = 0;
     private String q;
     private String a;
     private String b;
@@ -27,20 +27,12 @@ public class Question extends Activity{
         return b;
     }
 
-    public void setB(String b) {
-        this.b = b;
-    }
-
     public int getNum() {
         return num;
     }
 
     public String getQ() {
         return q;
-    }
-
-    public void setQ(String q) {
-        this.q = q;
     }
 
     public String getA() {
@@ -61,10 +53,6 @@ public class Question extends Activity{
 
     public String getAns() {
         return ans;
-    }
-
-    public void setAns(String ans) {
-        this.ans = ans;
     }
 
     public boolean correct(Object b){

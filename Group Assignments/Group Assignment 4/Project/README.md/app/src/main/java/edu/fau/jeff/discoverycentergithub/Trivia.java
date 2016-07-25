@@ -58,22 +58,27 @@ public class Trivia extends AppCompatActivity implements View.OnClickListener {
         button2.setBackgroundResource(R.drawable.answerbox);
         button3.setBackgroundResource(R.drawable.answerbox);
         button4.setBackgroundResource(R.drawable.answerbox);
-        q = quiz[f];
-        ((TextView) findViewById(R.id.textView)).setText(q.getNum()+". "+q.getQ());
-        ansarr = new ArrayList<>();
-        ansarr.add(q.getA());
-        ansarr.add(q.getB());
-        ansarr.add(q.getC());
-        ansarr.add(q.getAns());
-        Collections.shuffle(ansarr);
-        button.setText(ansarr.get(0));
-        button2.setText(ansarr.get(1));
-        button3.setText(ansarr.get(2));
-        button4.setText(ansarr.get(3));
+        if((f-1)!=quiz.length){
+            q = quiz[f];
+            ((TextView) findViewById(R.id.textView)).setText(q.getNum()+". "+q.getQ());
+            ansarr = new ArrayList<>();
+            ansarr.add(q.getA());
+            ansarr.add(q.getB());
+            ansarr.add(q.getC());
+            ansarr.add(q.getAns());
+            Collections.shuffle(ansarr);
+            button.setText(ansarr.get(0));
+            button2.setText(ansarr.get(1));
+            button3.setText(ansarr.get(2));
+            button4.setText(ansarr.get(3));
+        }else{
+            setContentView(R.layout.activity_selection_screen);
+        }
     }
 
     public void clicky(Button butto){
         if (q.correct(butto)) {
+            butto.setText("");
             butto.setBackgroundResource(R.drawable.answerboxcorrect);
             final Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
@@ -111,5 +116,7 @@ public class Trivia extends AppCompatActivity implements View.OnClickListener {
             }
         }
     }
+
+    
 }
 
