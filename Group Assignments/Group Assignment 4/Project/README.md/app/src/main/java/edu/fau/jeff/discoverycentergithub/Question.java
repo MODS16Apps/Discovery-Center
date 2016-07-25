@@ -7,7 +7,8 @@ import android.widget.Button;
  * Created by Clauciela on 7/15/2016.
  */
 public class Question extends Activity{
-    private static int num = 0;
+    private static int counter = 0;
+    private int num;
     private String q;
     private String a;
     private String b;
@@ -15,7 +16,8 @@ public class Question extends Activity{
     private String ans;
 
     public Question(String q, String a, String b, String c, String ans){
-        this.num++;
+        counter++;
+        num = counter;
         this.q = q;
         this.a = a;
         this.b = b;
