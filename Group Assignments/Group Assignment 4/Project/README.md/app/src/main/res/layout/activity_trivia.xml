@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imageView2"
-            android:src="@drawable/questionboxlargeone"
+            android:src="@drawable/questionboxblue"
             android:adjustViewBounds="true"
             android:visibility="visible"
             android:layout_gravity="center" />
@@ -30,7 +30,9 @@
             android:id="@+id/textView"
             android:layout_gravity="center"
             android:layout_weight="0.41"
-            android:visibility="visible" />
+            android:visibility="visible"
+            android:textColor="#3508ff"
+            android:textSize="@dimen/abc_dialog_padding_material" />
 
         <ProgressBar
             style="?android:attr/progressBarStyleHorizontal"
@@ -53,7 +55,8 @@
             android:text="New Button"
             android:id="@+id/button2"
             android:layout_gravity="left|bottom"
-            android:background="@drawable/answerbox" />
+            android:background="@drawable/answerbox"
+            android:textColor="#3508ff" />
 
         <Button
             android:layout_width="229dp"
@@ -61,7 +64,8 @@
             android:text="New Button"
             android:id="@+id/button3"
             android:layout_gravity="right|top"
-            android:background="@drawable/answerbox" />
+            android:background="@drawable/answerbox"
+            android:textColor="#3508ff" />
 
         <Button
             android:layout_width="229dp"
@@ -69,7 +73,8 @@
             android:text="New Button"
             android:id="@+id/button"
             android:layout_gravity="left|top"
-            android:background="@drawable/answerbox" />
+            android:background="@drawable/answerbox"
+            android:textColor="#3508ff" />
 
         <Button
             android:layout_width="229dp"
@@ -77,7 +82,8 @@
             android:text="New Button"
             android:id="@+id/button4"
             android:layout_gravity="right|bottom"
-            android:background="@drawable/answerbox" />
+            android:background="@drawable/answerbox"
+            android:textColor="#3508ff" />
     </FrameLayout>
 
 </LinearLayout>
