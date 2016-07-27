@@ -23,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:text="N A M E"
         android:ems="10"
         android:id="@+id/enterName_editText"
         android:layout_alignBottom="@+id/modsLogo"
@@ -42,7 +42,7 @@
         android:layout_below="@+id/modsLogo"
         android:layout_alignEnd="@+id/modsLogo"
         android:layout_alignStart="@+id/enterName_editText"
-        android:text="Birthday"
+        android:text="A G E"
         android:clickable="true"
         android:enabled="true"
         android:editable="true" />

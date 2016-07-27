@@ -59,6 +59,7 @@ public class SelectionScreen extends AppCompatActivity implements View.OnClickLi
         switch (view.getId()){
             case R.id.triviagame:
                 Intent i0=new Intent(this, Trivia.class);
+
                 startActivity(i0);
                 break;
         }
