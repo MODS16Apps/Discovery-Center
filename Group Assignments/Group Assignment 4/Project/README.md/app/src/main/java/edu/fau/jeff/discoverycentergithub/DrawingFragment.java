@@ -1,6 +1,7 @@
 package edu.fau.jeff.discoverycentergithub;
 
 import android.Manifest;
+import android.annotation.TargetApi;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -10,6 +11,7 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -171,6 +173,7 @@ public class DrawingFragment extends Fragment {
 
     // requests for the permission needed for saving the image if
     // necessary or saves the image if the app already has permission
+    @TargetApi(Build.VERSION_CODES.M)
     private void saveImage() {
         // checks if the app does not have permission needed
         // to save the image
