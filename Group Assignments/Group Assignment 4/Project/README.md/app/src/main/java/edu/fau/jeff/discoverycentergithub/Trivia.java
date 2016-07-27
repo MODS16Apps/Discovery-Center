@@ -12,8 +12,6 @@ import android.widget.Button;
 import java.lang.*;
 import java.util.*;
 import android.os.Handler;
-
-
 /**
  * Created by Clauciela on 7/15/2016.
  */
@@ -25,7 +23,16 @@ public class Trivia extends AppCompatActivity implements View.OnClickListener {
     Button button2;
     Button button3;
     Button button4;
+    boolean firstattempt = true;
+    private static int score = 0;
     private int f = 0;
+
+    public static int getScore(){
+        return score;
+    }
+    public static void resetScore(){
+        score = 0;
+    }
 
     Question on = new Question("What kind of Fig Tree lies in the Discovery Center?", "Orange", "Palm", "Conadria", "Strangler");
     Question tw = new Question("Where does the most orange juice come from?", "California", "Arizona", "Texas", "Florida");
@@ -57,13 +64,13 @@ public class Trivia extends AppCompatActivity implements View.OnClickListener {
     }
 
     public void quizMethod() {
-        button.setBackgroundResource(R.drawable.answerbox);
-        button2.setBackgroundResource(R.drawable.answerbox);
-        button3.setBackgroundResource(R.drawable.answerbox);
-        button4.setBackgroundResource(R.drawable.answerbox);
-        if((f+1)!=quiz.length){
+        button.setBackgroundResource(R.drawable.buttonclick);
+        button2.setBackgroundResource(R.drawable.buttonclick);
+        button3.setBackgroundResource(R.drawable.buttonclick);
+        button4.setBackgroundResource(R.drawable.buttonclick);
+        if ((f) != quiz.length) {
             q = quiz[f];
-            ((TextView) findViewById(R.id.textView)).setText(q.getNum()+". "+q.getQ());
+            ((TextView) findViewById(R.id.textView)).setText(q.getNum() + ". " + q.getQ());
             ansarr = new ArrayList<>();
             ansarr.add(q.getA());
             ansarr.add(q.getB());
@@ -74,16 +81,18 @@ public class Trivia extends AppCompatActivity implements View.OnClickListener {
             button2.setText(ansarr.get(1));
             button3.setText(ansarr.get(2));
             button4.setText(ansarr.get(3));
-        }else{
+        } else {
             Question.RESETCOUNTER();
-            Intent i0=new Intent(this, SelectionScreen.class);
-            startActivity(i0);
-
+            Intent i1 = new Intent(this, EndPage.class);
+            startActivity(i1);
         }
     }
 
-    public void clicky(Button butto){
+    public void clicky(Button butto) {
         if (q.correct(butto)) {
+            if (firstattempt) {
+                score++;
+            }
             butto.setText("");
             butto.setBackgroundResource(R.drawable.answerboxcorrect);
             final Handler handler = new Handler();
@@ -91,15 +100,17 @@ public class Trivia extends AppCompatActivity implements View.OnClickListener {
                 @Override
                 public void run() {
                     f++;
-                    n.setProgress(f*10);
+                    n.setProgress(f * 10);
                     ansarr.clear();
                     quizMethod();
+                    firstattempt = true;
                 }
-            }, 700);
+            }, 400);
 
-        }else{
+        } else {
             butto.setBackgroundResource(R.drawable.answerboxwrong);
             butto.setText("");
+            firstattempt = false;
         }
     }
 
@@ -124,26 +135,4 @@ public class Trivia extends AppCompatActivity implements View.OnClickListener {
             }
         }
     }
-    public boolean onLongClick(View v) {
-        switch (v.getId()) {
-            case R.id.button: {
-                clicky(button);
-                break;
-            }
-            case R.id.button2: {
-                clicky(button2);
-                break;
-            }
-            case R.id.button3: {
-                clicky(button3);
-                break;
-            }
-            case R.id.button4: {
-                clicky(button4);
-                break;
-            }
-        }
-        return true;
-    }
 }
-

@@ -42,6 +42,7 @@
             android:layout_gravity="center_horizontal|top"
             android:visibility="visible" />
 
+
     </FrameLayout>
 
     <FrameLayout
@@ -55,7 +56,7 @@
             android:text="New Button"
             android:id="@+id/button2"
             android:layout_gravity="left|bottom"
-            android:background="@drawable/answerbox"
+            android:background="@drawable/buttonclick"
             android:textColor="#3508ff" />
 
         <Button
@@ -64,7 +65,7 @@
             android:text="New Button"
             android:id="@+id/button3"
             android:layout_gravity="right|top"
-            android:background="@drawable/answerbox"
+            android:background="@drawable/buttonclick"
             android:textColor="#3508ff" />
 
         <Button
@@ -73,7 +74,7 @@
             android:text="New Button"
             android:id="@+id/button"
             android:layout_gravity="left|top"
-            android:background="@drawable/answerbox"
+            android:background="@drawable/buttonclick"
             android:textColor="#3508ff" />
 
         <Button
@@ -82,7 +83,7 @@
             android:text="New Button"
             android:id="@+id/button4"
             android:layout_gravity="right|bottom"
-            android:background="@drawable/answerbox"
+            android:background="@drawable/buttonclick"
             android:textColor="#3508ff" />
     </FrameLayout>
 

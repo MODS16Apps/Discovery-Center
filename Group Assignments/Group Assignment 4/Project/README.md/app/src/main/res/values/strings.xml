@@ -15,6 +15,14 @@
         tributes to its past can still be found. The New River Inn still exists today as part of the Fort Lauderdale Historic Society,
         and can be visited at the River Walk.
     </string>
+
+    <string name="settings">
+        &#160;&#160;The students who made the Discovery Center, recreated the original app from last year. \n
+        \n
+        &#160;&#160;insert ur text here \n
+        \n
+        &#160;&#160;insert ur text here
+    </string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_selection_menu">SelectionMenu</string>
 >>>>>>> origin/master
