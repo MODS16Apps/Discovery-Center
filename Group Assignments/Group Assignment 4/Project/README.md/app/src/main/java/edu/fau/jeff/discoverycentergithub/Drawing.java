@@ -1,6 +1,8 @@
 package edu.fau.jeff.discoverycentergithub;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
@@ -25,12 +27,17 @@ public class Drawing extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drawing_screen);
-        addPicture=(Button)findViewById(R.id.button5);
-        display= (ImageView) findViewById(R.id.imageView6);
-        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        //setSupportActionBar(toolbar);
+        //addPicture=(Button)findViewById(R.id.button5);
+        //display= (ImageView) findViewById(R.id.imageView6);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        int screenSize=getResources().getConfiguration().screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK;
+        if(screenSize==Configuration.SCREENLAYOUT_SIZE_XLARGE)
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        else
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        addPicture.setOnClickListener(new View.OnClickListener() {
+       /* addPicture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent();
@@ -40,6 +47,7 @@ public class Drawing extends AppCompatActivity {
                         "Select Picture"), SELECT_PICTURE);
             }
         });
+        */
     }
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
