@@ -49,10 +49,15 @@ public class PhotoAdventure extends AppCompatActivity {
         gallery=(Button)findViewById(R.id.openGallery);
         camera=(Button)findViewById(R.id.openCamera);
 
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+            camera.setEnabled(false);
+            ActivityCompat.requestPermissions(this, new String[] { Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE }, 0);
+        }
 
         camera.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                 file = Uri.fromFile(getOutputMediaFile());
                 intent.putExtra(MediaStore.EXTRA_OUTPUT, file);
@@ -129,6 +134,8 @@ public class PhotoAdventure extends AppCompatActivity {
         return new File(mediaStorageDir.getPath() + File.separator +
                 "IMG_"+ timeStamp + ".jpg");
     }
+
+
 
 
 

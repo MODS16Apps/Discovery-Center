@@ -11,20 +11,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView3"
-        android:src="@drawable/photoadventure"
-        android:layout_marginBottom="453dp"
-        android:layout_alignParentBottom="true"
+        android:src="@drawable/photoadventurebox"
         android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/openCamera"
-        android:layout_marginBottom="151dp"
+        android:layout_marginBottom="253dp"
         android:background="@drawable/launchcamera"
+        android:layout_marginEnd="64dp"
         android:layout_alignParentBottom="true"
-        android:layout_toStartOf="@+id/openGallery"
-        android:layout_marginEnd="67dp" />
+        android:layout_toStartOf="@+id/openGallery" />
 
     <Button
         android:layout_width="wrap_content"
