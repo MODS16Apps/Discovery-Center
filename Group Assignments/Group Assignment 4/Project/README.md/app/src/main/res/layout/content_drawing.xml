@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:weightSum="1"
+android:background="#ffcd05"
+android:orientation="vertical">
+
+<ImageView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/imageView6"
+    android:layout_centerVertical="true"
+    android:layout_alignParentEnd="true"
+    android:background="#ffcd05"
+    android:layout_gravity="left|bottom" />
+
+<Button
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:id="@+id/button5"
+    android:background="@drawable/addbuttonbest"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentStart="true"
+    android:layout_gravity="right|bottom" />
+
+</FrameLayout>

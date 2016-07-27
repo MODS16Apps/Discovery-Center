@@ -35,7 +35,7 @@ import java.util.Date;
  * Created by Jeffrey S on 7/17/2016.
  */
 public class PhotoAdventure extends AppCompatActivity {
-    private static final int REQUEST_IMAGE = 100, SELECT_PICTURE=1;
+    private static final int SELECT_PICTURE=1;
     private ImageView picture;
     private Uri file;
     Button camera, gallery;
@@ -46,7 +46,7 @@ public class PhotoAdventure extends AppCompatActivity {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_photo_adventure);
         picture = (ImageView) findViewById(R.id.imageView3);
-        gallery=(Button)findViewById(R.id.openGallery);
+        //gallery=(Button)findViewById(R.id.openGallery);
         camera=(Button)findViewById(R.id.openCamera);
 
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
@@ -63,10 +63,11 @@ public class PhotoAdventure extends AppCompatActivity {
                 intent.putExtra(MediaStore.EXTRA_OUTPUT, file);
 
                 startActivityForResult(intent, 100);
+
             }
         });
 
-        gallery.setOnClickListener(new View.OnClickListener() {
+       /* gallery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent();
@@ -76,7 +77,7 @@ public class PhotoAdventure extends AppCompatActivity {
                         "Select Picture"), SELECT_PICTURE);
             }
         });
-
+        */
     }
 
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
@@ -92,22 +93,10 @@ public class PhotoAdventure extends AppCompatActivity {
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode == SELECT_PICTURE && resultCode == RESULT_OK && data != null && data.getData() != null) {
-
+        Intent i1=new Intent(PhotoAdventure.this, Drawing.class);
+        startActivity(i1);
+        /*if (requestCode == SELECT_PICTURE && resultCode == RESULT_OK && data != null && data.getData() != null) {
             Uri uri = data.getData();
-
-            try {
-                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
-                Log.d("myApp", String.valueOf(bitmap));
-                picture.setImageBitmap(bitmap);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-
-        if (requestCode == 100) {
-            Uri uri = data.getData();
-
             try {
                 Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
                 Log.d("myApp", String.valueOf(bitmap));
@@ -117,6 +106,23 @@ public class PhotoAdventure extends AppCompatActivity {
             }
 
         }
+        */
+
+        /*if (requestCode == 100 && resultCode == RESULT_OK && data != null && data.getData() != null) {
+            Intent i1=new Intent(PhotoAdventure.this, Drawing.class);
+            startActivity(i1);
+            Uri uri = data.getData();
+            try {
+                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
+                Log.d("myApp", String.valueOf(bitmap));
+                picture.setImageBitmap(bitmap);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            */
+
+
+
 
     }
 

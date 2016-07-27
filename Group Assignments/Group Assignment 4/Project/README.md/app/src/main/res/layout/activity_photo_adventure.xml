@@ -18,18 +18,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/openCamera"
-        android:layout_marginBottom="253dp"
+        android:layout_marginBottom="245dp"
         android:background="@drawable/launchcamera"
-        android:layout_marginEnd="64dp"
         android:layout_alignParentBottom="true"
-        android:layout_toStartOf="@+id/openGallery" />
+        android:layout_centerHorizontal="true" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/openGallery"
-        android:background="@drawable/opengallery"
-        android:layout_alignTop="@+id/openCamera"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="64dp" />
 </RelativeLayout>
