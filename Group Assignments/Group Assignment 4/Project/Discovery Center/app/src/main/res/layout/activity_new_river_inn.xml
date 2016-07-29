@@ -37,7 +37,8 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@+id/textView3"
             android:text="@string/new_river_inn"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:textColor="#3508ff" />
 
     </LinearLayout>
 </ScrollView>
