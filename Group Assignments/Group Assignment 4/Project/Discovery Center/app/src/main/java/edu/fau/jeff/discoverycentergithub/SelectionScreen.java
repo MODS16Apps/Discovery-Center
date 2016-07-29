@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 public class SelectionScreen extends AppCompatActivity implements View.OnClickListener {
     private ImageView trivia, scavengerHunt, photoAdventure, settings;
-    private TextView welcome, name;
+    private TextView welcome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,10 +23,9 @@ public class SelectionScreen extends AppCompatActivity implements View.OnClickLi
         Intent ii=getIntent();
         Bundle b=ii.getExtras();
         welcome=(TextView)findViewById(R.id.textView6);
-        name=(TextView)findViewById(R.id.textView7);
-        welcome.setText("Welcome to the Discovery Center:    ");
+        welcome.setText("   Welcome to the Discovery Center, ");
         if(b!=null){
-            name.setText((String)b.get("name"));
+            welcome.setText(welcome.getText()+(String)b.get("name"));
         }
 
 
