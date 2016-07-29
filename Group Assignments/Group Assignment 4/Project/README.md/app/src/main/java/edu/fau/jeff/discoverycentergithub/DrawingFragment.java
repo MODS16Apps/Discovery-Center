@@ -166,6 +166,7 @@ public class DrawingFragment extends Fragment {
             case R.id.print:
                 doodleView.printImage(); // print the current images
                 return true; // consume the menu event
+            //launch explorer
         }
 
         return super.onOptionsItemSelected(item);

@@ -28,8 +28,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         name=(EditText)findViewById(R.id.enterName_editText);
         age=(EditText)findViewById(R.id.dayOfBirth_editText);
         startButton.setOnClickListener(this);
-
-
         male=(RadioButton)findViewById(R.id.male_radioButton);
         female=(RadioButton)findViewById(R.id.female_radioButton);
         male.setOnClickListener(this);
@@ -54,7 +52,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.imageView:
                 Log.v(nameInput, name.getText().toString());
                 Log.v(ageInput, age.getText().toString());
-                //Here goes the AsyncTask (wendsday)
                 Intent intent=new Intent(this, SelectionScreen.class);
                 startActivity(intent);
                 break;

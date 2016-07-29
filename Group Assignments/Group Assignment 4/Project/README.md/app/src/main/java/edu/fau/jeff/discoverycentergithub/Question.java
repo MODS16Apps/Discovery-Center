@@ -53,6 +53,10 @@ public class Question extends Activity{
         this.c = c;
     }
 
+    public static void RESETCOUNTER() {
+        counter = 0;
+    }
+
     public String getAns() {
         return ans;
     }

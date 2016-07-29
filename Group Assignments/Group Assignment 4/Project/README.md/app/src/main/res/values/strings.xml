@@ -15,6 +15,28 @@
         tributes to its past can still be found. The New River Inn still exists today as part of the Fort Lauderdale Historic Society,
         and can be visited at the River Walk.
     </string>
+
+    <string name="settings">
+        &#160;&#160;This app was created in part by an educational internship initiative at the Museum called Apptitude.
+        In this program, students were split into groups and designated exhibits in which they would design an app for.
+        Some groups opted to use apps previously created by the museums prior interns, however this one was built from the
+        ground up so we could shape it to our vision.\n
+        \n
+        &#160;&#160;The students who have created this are Jeffrey Schaefer, Brandon Wand, and Angel Ramirez. However not all
+        credit goes to them. The fine faculty at FAU, members of the online community Stack Overflow, Summer Scarlatelli,
+        and many others have cast their influence here.\n
+        \n
+
+    </string>
+    <string name="finished">
+        Thanks for playing!
+        \n &#160;&#160;You got-
+    </string>
+    <string name="ar">
+        &#160;If you want to experience real life Augmented Reality then you came to the right place!
+        \n\n
+        &#160;First locate the poster above in the Discovery Center. Then click the button below!
+    </string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_selection_menu">SelectionMenu</string>
     <string name="title_activity_drawing">Drawing</string>

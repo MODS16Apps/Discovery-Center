@@ -25,7 +25,8 @@
 
 
 
-    <include layout="@layout/content_drawing"/>
+    <include layout="@layout/content_drawing"
+        android:id="@+id/penis" />
 
 </android.support.design.widget.CoordinatorLayout>
 

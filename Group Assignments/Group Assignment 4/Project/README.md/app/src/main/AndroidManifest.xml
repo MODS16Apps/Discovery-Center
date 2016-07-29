@@ -41,7 +41,11 @@
             android:label="@string/app_name" />
         <activity
             android:name=".Drawing"
-            android:label="Discovery Center"/>
+            android:label="Discovery Center" />
+        <activity
+            android:name=".EndPage"
+            android:label="@string/app_name" />
+        <activity android:name=".AugmentedReality"></activity>
     </application>
 
 </manifest>

@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.Point;
+import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v4.print.PrintHelper;
 import android.util.AttributeSet;
@@ -25,7 +26,8 @@ public class DoodleView extends View {
     // used to determine whether user moved a finger enough to draw again
     private static final float TOUCH_TOLERANCE = 10;
 
-    private Bitmap bitmap; // drawing area for displaying or saving
+    private Bitmap bitmap;// drawing area for displaying or saving
+    private static Bitmap bitmapp;
     private Canvas bitmapCanvas; // used to to draw on the bitmap
     private final Paint paintScreen; // used to draw bitmap onto screen
     private final Paint paintLine; // used to draw lines onto bitmap
@@ -46,22 +48,23 @@ public class DoodleView extends View {
         paintLine.setStyle(Paint.Style.STROKE); // solid line
         paintLine.setStrokeWidth(5); // set the default line width
         paintLine.setStrokeCap(Paint.Cap.ROUND); // rounded line ends
+
     }
 
     // creates Bitmap and Canvas based on View's size
     @Override
     public void onSizeChanged(int w, int h, int oldW, int oldH) {
-        bitmap = Bitmap.createBitmap(getWidth(), getHeight(),
-                Bitmap.Config.ARGB_8888);
-        bitmapCanvas = new Canvas(bitmap);
-        bitmap.eraseColor(Color.WHITE); // erase the Bitmap with white
+        bitmapp = Bitmap.createScaledBitmap(bitmapp,this.getWidth(),this.getHeight(),true);
+
+        bitmapCanvas = new Canvas(bitmapp);
+        //bitmap.eraseColor(Color.WHITE); // erase the Bitmap with white
     }
 
     // clear the painting
     public void clear() {
         pathMap.clear(); // remove all paths
         previousPointMap.clear(); // remove all previous points
-        bitmap.eraseColor(Color.WHITE); // clear the bitmap
+        bitmapp.eraseColor(Color.WHITE); // clear the bitmap
         invalidate(); // refresh the screen
     }
 
@@ -89,11 +92,17 @@ public class DoodleView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         // draw the background screen
-        canvas.drawBitmap(bitmap, 0, 0, paintScreen);
+
+        //bitmap=(Bitmap)getTag(1);
+        canvas.drawBitmap(bitmapp, 0, 0, paintScreen);
 
         // for each path currently being drawn
         for (Integer key : pathMap.keySet())
             canvas.drawPath(pathMap.get(key), paintLine); // draw line
+    }
+
+    public static void setBitmap(Bitmap abc){
+        bitmapp=abc;
     }
 
     // handle touch event
