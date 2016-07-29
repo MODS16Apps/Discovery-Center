@@ -38,5 +38,6 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:background="@drawable/buttonclick"
-        android:textStyle="bold|italic" />
+        android:textStyle="bold|italic"
+        android:textColor="#3508ff" />
 </RelativeLayout>

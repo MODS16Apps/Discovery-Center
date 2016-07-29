@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/textView5"
         android:layout_gravity="center"
-        android:textSize="52dp"
+        android:textSize="45dp"
         android:layout_centerVertical="true"
         android:layout_alignEnd="@+id/button5"
         android:textColor="#3508ff"

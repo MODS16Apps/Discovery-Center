@@ -25,7 +25,7 @@ public class SelectionScreen extends AppCompatActivity implements View.OnClickLi
         welcome=(TextView)findViewById(R.id.textView6);
         welcome.setText("   Welcome to the Discovery Center, ");
         if(b!=null){
-            welcome.setText(welcome.getText()+(String)b.get("name"));
+            welcome.setText(welcome.getText()+(String)b.get("name")+"!");
         }
 
 
@@ -69,8 +69,6 @@ public class SelectionScreen extends AppCompatActivity implements View.OnClickLi
             case R.id.triviagame:
 
                 Intent i0=new Intent(this, Trivia.class);
-
-
                 startActivity(i0);
                 break;
         }
