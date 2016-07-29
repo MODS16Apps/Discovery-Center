@@ -64,6 +64,7 @@ public class Trivia extends AppCompatActivity implements View.OnClickListener {
     }
 
     public void quizMethod() {
+        Question.RESETCOUNTER();
         button.setBackgroundResource(R.drawable.buttonclick);
         button2.setBackgroundResource(R.drawable.buttonclick);
         button3.setBackgroundResource(R.drawable.buttonclick);
