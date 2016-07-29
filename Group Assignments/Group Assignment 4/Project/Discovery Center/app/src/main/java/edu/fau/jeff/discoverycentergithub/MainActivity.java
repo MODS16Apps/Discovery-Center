@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ImageView startButton;
     private EditText name, age;
     private RadioButton male, female;
-    private String nameInput, ageInput;
+    private String nameInput, ageInput, genderInput;
     private Context context;
 
     @Override
@@ -49,16 +49,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
 
         switch (view.getId()){
+            case R.id.enterName_editText:
+                name.setText(" ");
+                break;
+            case R.id.dayOfBirth_editText:
+                age.setText(" ");
+                break;
             case R.id.imageView:
-                Log.v(nameInput, name.getText().toString());
-                Log.v(ageInput, age.getText().toString());
+                nameInput=name.getText().toString();
+                ageInput=age.getText().toString();
                 Intent intent=new Intent(this, SelectionScreen.class);
+                intent.putExtra("name", nameInput);
+                intent.putExtra("gender", genderInput);
+                intent.putExtra("age", ageInput);
                 startActivity(intent);
                 break;
             case R.id.male_radioButton:
                 if(female.isChecked()){
                     female.setChecked(false);
                     male.setChecked(true);
+                    genderInput="male";
                 }
 
                 break;
@@ -66,6 +76,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if(male.isChecked()){
                     male.setChecked(false);
                     female.setChecked(true);
+                    genderInput="female";
                 }
                 break;
         }

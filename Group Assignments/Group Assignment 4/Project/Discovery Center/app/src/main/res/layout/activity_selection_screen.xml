@@ -23,7 +23,28 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-        <ImageView
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Large Text"
+                android:id="@+id/textView6"
+                android:textColor="#f0373b97"
+                android:textSize="@dimen/abc_action_button_min_width_overflow_material"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:id="@+id/textView7"
+                android:layout_gravity="center_horizontal"
+                android:textSize="@dimen/abc_action_button_min_width_overflow_material"
+                android:textColor="#f0373b97"
+                android:textStyle="bold" />
+
+            <ImageView
             android:layout_width="match_parent"
             android:layout_height="280dp"
             android:src="@drawable/triviabutton"
