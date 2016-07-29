@@ -15,9 +15,9 @@
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:id="@+id/imageView5"
-            android:src="@drawable/settingsbox" />
+            android:src="@drawable/settingslarge" />
         <View
             android:layout_width="match_parent"
             android:layout_height="10dp"
@@ -26,9 +26,9 @@
 
         <ImageView
             android:layout_width="502dp"
-            android:layout_height="400dp"
+            android:layout_height="325dp"
             android:id="@+id/imageView4"
-            android:src="@drawable/modslogo"
+            android:src="@drawable/modslogolarge"
             android:layout_gravity="top|center_horizontal" />
 
         <TextView
@@ -37,7 +37,8 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@+id/textView3"
             android:text="@string/settings"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:textColor="#4653a4" />
 
     </LinearLayout>
 </ScrollView>
