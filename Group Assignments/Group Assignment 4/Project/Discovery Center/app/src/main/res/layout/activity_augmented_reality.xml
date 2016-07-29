@@ -37,6 +37,6 @@
         android:id="@+id/button7"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/answerbox"
+        android:background="@drawable/buttonclick"
         android:textStyle="bold|italic" />
 </RelativeLayout>
