@@ -32,6 +32,10 @@ public class Question extends Activity{
     public int getNum() {
         return num;
     }
+    
+    public void setNum(int n) {
+        num = n;
+    }
 
     public String getQ() {
         return q;

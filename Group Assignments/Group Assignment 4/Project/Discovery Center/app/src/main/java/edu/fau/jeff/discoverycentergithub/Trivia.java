@@ -83,6 +83,7 @@ public class Trivia extends AppCompatActivity implements View.OnClickListener {
             button4.setText(ansarr.get(3));
         } else {
             Question.RESETCOUNTER();
+            q.setNum(0);
             Intent i1 = new Intent(this, EndPage.class);
             startActivity(i1);
         }
